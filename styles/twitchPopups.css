@@ -1,0 +1,62 @@
+<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+
+@font-face 
+{
+    font-family: 'Disco';
+    src: url('/fonts/disco.ttf');
+}
+@font-face 
+{
+    font-family: 'CaviarDreams';
+    src: url('/fonts/CaviarDreams.ttf');    
+}
+
+body 
+{ 
+    background-color: transparent; 
+    font-family: "Michroma", verdana, sans-serif; 
+}
+
+.messageBox 
+{
+    border-top: 15px solid #1d335f;
+    width: 350px;
+    background-color: #294886; 
+    color: #fff;
+    font-size: 10pt;
+    display: none; 
+    padding: 15px 10px 15px 10px; 
+    margin: 0px 0px 0px 0px; 
+    position: fixed; 
+    left: 0; 
+    top: 20px;
+}
+
+.messageBoxNoBG
+{
+    width: 350px;
+    color: #fff;
+    font-size: 10pt;
+    display: none; 
+    padding: 15px 10px 15px 10px; 
+    margin: 0px 0px 0px 0px; 
+    position: fixed; 
+    left: 0; 
+    top: 200px;
+}
+
+.hdrContainer
+{
+    color: white; 
+    display: none; 
+    padding: 5px 0px 0px 0px; 
+    margin: 0px auto 0px auto;
+}
+
+.vcenter 
+{ 
+    display: flex; 
+    align-items: center; 
+    vertical-align: middle !important; 
+    height: 100%; 
+}
