@@ -2,19 +2,14 @@
 
 @font-face 
 {
-    font-family: 'Disco';
-    src: url('/fonts/disco.ttf');
-}
-@font-face 
-{
     font-family: 'CaviarDreams';
-    src: url('/fonts/CaviarDreams.ttf');    
+    src: url('/fonts/CaviarDreams.ttf');
 }
 
 body 
 { 
     background-color: transparent; 
-    font-family: "Michroma", verdana, sans-serif; 
+    font-family: "Michroma", verdana, sans-serif;
 }
 
 .messageBox 

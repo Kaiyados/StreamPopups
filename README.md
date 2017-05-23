@@ -10,10 +10,14 @@ Tutorial Video: http://www.youtube.com
 ### Personalizing/Customizing
 If you would like to customize the popup overlays with different designs, then I suggest that you should have some knowledge of HTML, CSS, Javascript/JQuery. However, this is completely **optional**. I do suggest that you at least watch my video to see the key points of editing.
 
-
 HTML Tutorial: https://www.w3schools.com/html/
 CSS Tutorial: https://www.w3schools.com/html/html_css.asp
 Javascript Tutorial: https://www.w3schools.com/html/html_scripts.asp
+Font Squirrel: https://www.fontsquirrel.com
+Google Fonts: https://fonts.google.com/
+0to255: http://www.0to255.com/
+
+Within the code, there is a place defined as animation style. To find the animation style that you like, visit JQueryUI (https://jqueryui.com/effect/) to test the different animations. Just replace "fade" or "fold" with your choice of animation.
 
 ##### Editor
 It would be very helpful to use a nice editor to edit and test your popup overlays. You could use Notepad, but it's not very great for editing .html or .css files. Here are some suggestions:
