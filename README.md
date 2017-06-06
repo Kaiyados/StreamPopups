@@ -13,6 +13,8 @@ If you would like to customize the popup overlays with different designs, then I
 HTML Tutorial: https://www.w3schools.com/html/
 CSS Tutorial: https://www.w3schools.com/html/html_css.asp
 Javascript Tutorial: https://www.w3schools.com/html/html_scripts.asp
+Bootstrap Grid System: http://getbootstrap.com/css/#grid
+Bootstrap Glyphicons: http://getbootstrap.com/components/#glyphicons
 Font Squirrel: https://www.fontsquirrel.com
 Google Fonts: https://fonts.google.com/
 0to255: http://www.0to255.com/
