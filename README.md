@@ -40,3 +40,9 @@ I like IIS Express. Both are simple to setup, but IIS Express is a smaller footp
 
 ##### Stream Software - Browser Source
 This should be pretty straight forward. If you are already streaming, and you have used something like Stream Labs, then you should easily point to the html file that you just set up hosting for.
+
+#### Updates
+#### 12/2/2017
+Added the ability to pass in the string "once" in to the variable 'minutesToShow' in order to accompany one time messages. An example use of this would be to have one browser source in streaming software that, once set to visible, will show the message only once. If you forget to hide the source after it displays, then it won't embarrassingly show multiple times in a loop.
+
+Removed "Random Messages" array from example.html, created randomMessages.js, and referenced randomMessages.js in example.html for organizational purposes. It may get lost in a the middle of other code, so putting the array of messages in it's own file makes it easier to find and update when needed. If you need different set of randome messages, then you can either create another file to reference, or add them to randomMessages.js as a new differently named variable.

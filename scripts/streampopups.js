@@ -1,39 +1,51 @@
+//This function is directly responsible for showing the popup message object.
 function showElement(vObject, animation, animationTime, timeShown)  
 {
     $(vObject).show(animation, animationTime * 1000).delay(timeShown * 1000).hide(animation, animationTime * 1000);
 }
 
+//This function loops displaying single popup object, except when minutesToShow is "once." "once" tells this function
+//to display only one time.
 function loopPopup(vObject, animation, animationTime, timeShown, minutesToShow) 
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow == "all")
+    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
     {
         showElement(vObject, animation, animationTime, timeShown);
     }
     
-    setTimeout(function() {loopPopup(vObject,animation, animationTime, timeShown, minutesToShow); }, 60000);
+    if(minutesToShow.toLowerCase() != "once")
+    {
+        setTimeout(function() {loopPopup(vObject,animation, animationTime, timeShown, minutesToShow); }, 60000);
+    }
 }
 
+//This function loops displaying a popup object with random messages, except when minutesToShow is "once." "once" tells
+//this function to display only one time.
 function loopRandomMessage(vObject, animation, animationTime, timeShown, minutesToShow, messages) 
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow == "all")
+    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
     {
         vObject.find($("#messageText")).html(messages[Math.floor(Math.random() * messages.length)]);
         showElement(vObject, animation, animationTime, timeShown);
     }
     
-    setTimeout(function() {loopRandomMessage(vObject,animation, animationTime, timeShown, minutesToShow, messages); }, 60000);
+    if(minutesToShow.toLowerCase() != "once")
+    {
+        setTimeout(function() {loopRandomMessage(vObject,animation, animationTime, timeShown, minutesToShow, messages); }, 60000);
+    }
 }
 
-
+//This function loops multiple popup objects (expecting vObject to be an array of objects). This displays the array of popup objects
+// in a loop, except when minutesToShow is "once." "once" tells this function to show the objects one time.
 function loopMultiple(vObject, animation, animationTime, timeShown, minutesToShow) 
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow == "all")
+    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
     {
         vObject.forEach(function (item, index)
         {
@@ -48,5 +60,8 @@ function loopMultiple(vObject, animation, animationTime, timeShown, minutesToSho
         });
     }
     
-    setTimeout(function() { loopMultiple(vObject, animation, animationTime, timeShown, minutesToShow); }, 60000);
+    if(minutesToShow.toLowerCase() != "once")
+    {
+        setTimeout(function() { loopMultiple(vObject, animation, animationTime, timeShown, minutesToShow); }, 60000);
+    }
 }
