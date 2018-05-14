@@ -31,7 +31,9 @@ Brackets http://brackets.io/ - I personally like this one. I explain why in the 
 ### Setup
 
 ##### Hosting (Optional)
-I've done everything I can to make this work right away. However, you can't just open the example.html in a browser and it work (that depends on the browser). Most browsers won't natively interpret the javascript. They may not even render the styles correctly. So it has to be hosted locally. Again, my video should help with this. Here are some tools to help:
+I've done everything I can to make this work right away. However, sometimes you can't just open the example.html in a browser and it work. However, please check update 5/13/2018 below. Through some testing (with OBS at least) you can use "Local file" in a Browser source and it should work without a web server.
+
+Sometimes, however, some browsers won't interpret javascript out of the box. So it may have to be hosted locally. Again, my video should help with this. Here are some tools to help:
 
 WAMP http://www.wampserver.com/en/
 IIS Express https://www.microsoft.com/en-us/download/details.aspx?id=48264
