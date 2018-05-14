@@ -10,12 +10,29 @@ function loopPopup(vObject, animation, animationTime, timeShown, minutesToShow)
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
-    {
-        showElement(vObject, animation, animationTime, timeShown);
-    }
+    var showOnce = 0;
     
-    if(minutesToShow.toLowerCase() != "once")
+    if( typeof minutesToShow == "string")
+    {
+        if(minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
+        {
+            showElement(vObject, animation, animationTime, timeShown);
+        }
+        
+        if(minutesToShow.toLowerCase() == "once")
+        {
+            showOnce = 1;
+        }
+    }
+    else
+    {
+        if(minutesToShow.indexOf(nowMinute) >= 0)
+        {
+            showElement(vObject, animation, animationTime, timeShown);
+        }
+    }    
+    
+    if(showOnce = 0)
     {
         setTimeout(function() {loopPopup(vObject,animation, animationTime, timeShown, minutesToShow); }, 60000);
     }
@@ -27,13 +44,31 @@ function loopRandomMessage(vObject, animation, animationTime, timeShown, minutes
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
+    var showOnce = 0;
+    
+    if( typeof minutesToShow == "string")
     {
-        vObject.find($("#messageText")).html(messages[Math.floor(Math.random() * messages.length)]);
-        showElement(vObject, animation, animationTime, timeShown);
+        if(minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
+        {
+            vObject.find($("#messageText")).html(messages[Math.floor(Math.random() * messages.length)]);
+            showElement(vObject, animation, animationTime, timeShown);
+        }
+        
+        if(minutesToShow.toLowerCase() == "once")
+        {
+            showOnce = 1;
+        }
+    }
+    else
+    {
+        if(minutesToShow.indexOf(nowMinute) >= 0)
+        {
+            vObject.find($("#messageText")).html(messages[Math.floor(Math.random() * messages.length)]);
+            showElement(vObject, animation, animationTime, timeShown);
+        }
     }
     
-    if(minutesToShow.toLowerCase() != "once")
+    if(showOnce = 0)
     {
         setTimeout(function() {loopRandomMessage(vObject,animation, animationTime, timeShown, minutesToShow, messages); }, 60000);
     }
@@ -45,22 +80,49 @@ function loopMultiple(vObject, animation, animationTime, timeShown, minutesToSho
 {
     var now = new Date();
     var nowMinute = now.getMinutes();
-    if(minutesToShow.indexOf(nowMinute) >= 0 || minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
+    var showOnce = 0;
+    
+    if( typeof minutesToShow == "string")
     {
-        vObject.forEach(function (item, index)
+        if(minutesToShow.toLowerCase() == "all" || minutesToShow.toLowerCase() == "once")
         {
-            if(index == 0)
+            vObject.forEach(function (item, index)
             {
-                showElement(item, animation, animationTime, timeShown);
-            }
-            else
+                if(index == 0)
+                {
+                    showElement(item, animation, animationTime, timeShown);
+                }
+                else
+                {
+                    setTimeout(function() { showElement(item,animation,animationTime,timeShown); }, ((((animationTime * 2) + timeShown) * 1000) + 300) * index) ;
+                }
+            });
+        }
+        
+        if(minutesToShow.toLowerCase() == "once")
+        {
+            showOnce = 1;
+        }
+    }
+    else
+    {
+        if(minutesToShow.indexOf(nowMinute) >= 0)
+        {
+            vObject.forEach(function (item, index)
             {
-                setTimeout(function() { showElement(item,animation,animationTime,timeShown); }, ((((animationTime * 2) + timeShown) * 1000) + 300) * index) ;
-            }
-        });
+                if(index == 0)
+                {
+                    showElement(item, animation, animationTime, timeShown);
+                }
+                else
+                {
+                    setTimeout(function() { showElement(item,animation,animationTime,timeShown); }, ((((animationTime * 2) + timeShown) * 1000) + 300) * index) ;
+                }
+            });
+        }
     }
     
-    if(minutesToShow.toLowerCase() != "once")
+    if(showOnce = 0)
     {
         setTimeout(function() { loopMultiple(vObject, animation, animationTime, timeShown, minutesToShow); }, 60000);
     }

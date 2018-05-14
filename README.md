@@ -30,7 +30,7 @@ Brackets http://brackets.io/ - I personally like this one. I explain why in the 
 
 ### Setup
 
-##### Hosting
+##### Hosting (Optional)
 I've done everything I can to make this work right away. However, you can't just open the example.html in a browser and it work (that depends on the browser). Most browsers won't natively interpret the javascript. They may not even render the styles correctly. So it has to be hosted locally. Again, my video should help with this. Here are some tools to help:
 
 WAMP http://www.wampserver.com/en/
@@ -45,4 +45,7 @@ This should be pretty straight forward. If you are already streaming, and you ha
 #### 12/2/2017
 Added the ability to pass in the string "once" in to the variable 'minutesToShow' in order to accompany one time messages. An example use of this would be to have one browser source in streaming software that, once set to visible, will show the message only once. If you forget to hide the source after it displays, then it won't embarrassingly show multiple times in a loop.
 
-Removed "Random Messages" array from example.html, created randomMessages.js, and referenced randomMessages.js in example.html for organizational purposes. It may get lost in a the middle of other code, so putting the array of messages in it's own file makes it easier to find and update when needed. If you need different set of randome messages, then you can either create another file to reference, or add them to randomMessages.js as a new differently named variable.
+Removed "Random Messages" array from example.html, created randomMessages.js, and referenced randomMessages.js in example.html for organizational purposes. It may get lost in a the middle of other code, so putting the array of messages in it's own file makes it easier to find and update when needed. If you need different sets of randome messages, then you can either create another file to reference, or add them to randomMessages.js as a new differently named variable.
+
+#### 5/20/2018
+Through some random testing, I've found that it's not necessary to have local web server to host this tiny website, at least if you are using OBS. I'm unsure if this is due to a change ub OBS and/or if it was just a problem with pathing on the stylesheets and scripts. BTW, it was definitely partly due to the pathing. Leading forward-slash on paths were removed. You should be able to just use "Local file" when you use a Browser source.

@@ -1,12 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/styles/bootstrap.min.css">
-        <link rel="stylesheet" href="/styles/streampopups.css">
-        <script src="/scripts/jquery-3.2.1.min.js"></script>
-        <script src="/scripts/jquery-ui.min.js"></script>
-        <script src="/scripts/bootstrap.min.js"></script>
-        <script src="/scripts/randomMessages.js"></script>
-        <script src="/scripts/streampopups.js"></script>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/streampopups.css">
+        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="scripts/jquery-ui.min.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/randomMessages.js"></script>
+        <script src="scripts/streampopups.js"></script>
         
         <script type="text/javascript">
             //==============================================================================
@@ -32,7 +32,7 @@
                 //loopMultiple([$("#box2"), $("#box3")],"fold", 1.5, 7, [0,1,2,3,4,5]);                
                 //loopRandomMessage($("#rndmBox"), "fold", 1.5, 7, [6,7,8,9,10], messages);
                 //loopMultiple([$("#URL"),$("#URL2")],"fade", 1.5, 9, [11,12,13,14,15]);
-                //loopPopup($("#eventList"), "fade", 1.5, 7, [16,17,18,19,20]);
+                //loopMultiple([$("#eventList1"), $("#eventList2")], "fade", 1.5, 7, [16,17,18,19,20]);
             });
         </script>
     </head>
@@ -41,7 +41,7 @@
         <div id="box1" class="messageBox" style="height: 100px;">
             <div class="col-xs-2 vcenter">
                 <span class="glyphicon glyphicon-time" style="font-size: 35px;">&nbsp;</span>
-<!--                <img src="/images/image.png" class="img-responsive">-->
+<!--                <img src="images/image.png" class="img-responsive">-->
             </div>
             <div class="col-xs-10 vcenter">
                 Words that are in box 1.<br>
@@ -75,19 +75,25 @@
         </div>
         
         <div id="URL" class="hdrContainer" style="width: 170px;">
-            <!--<img src="/images/image1.png" style="height: 35px;">
+            <!--<img src="images/image1.png" style="height: 35px;">
             <span style="font-size: 20px; display: inline;">/ GamerTag</span>-->
             Twitch.tv/GamerTag
         </div>
         <div id="URL2" class="hdrContainer" style="width: 170px;">
-            <!--<img src="/images/image2.png" style="height: 35px;">
+            <!--<img src="images/image2.png" style="height: 35px;">
             <span style="font-size: 20px; display: inline;">/ GamerTag</span>-->
             YouTube.com/GamerTag
         </div>
         
-        <div id="eventList" class="messageBoxNoBG" style="height: 100px; width: 800px !important">
+        <div id="eventList1" class="messageBoxNoBG" style="height: 100px; width: 800px !important">
             <div class="col-xs-12">
-                <object data="https://streamlabs.com/widgets/event-list/v1/##################" style="width: 100%;"/>
+                <object data="https://streamlabs.com/widgets/event-list/v1/#################01" style="width: 100%;"></object>/>
+            </div>
+        </div>
+        
+        <div id="eventList2" class="messageBoxNoBG" style="height: 100px; width: 800px !important">
+            <div class="col-xs-12">
+                <object data="https://streamlabs.com/widgets/event-list/v1/#################02" style="width: 100%;"></object>/>
             </div>
         </div>
     
