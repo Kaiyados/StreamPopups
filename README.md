@@ -47,5 +47,5 @@ Added the ability to pass in the string "once" in to the variable 'minutesToShow
 
 Removed "Random Messages" array from example.html, created randomMessages.js, and referenced randomMessages.js in example.html for organizational purposes. It may get lost in a the middle of other code, so putting the array of messages in it's own file makes it easier to find and update when needed. If you need different sets of randome messages, then you can either create another file to reference, or add them to randomMessages.js as a new differently named variable.
 
-#### 5/20/2018
+#### 5/13/2018
 Through some random testing, I've found that it's not necessary to have local web server to host this tiny website, at least if you are using OBS. I'm unsure if this is due to a change ub OBS and/or if it was just a problem with pathing on the stylesheets and scripts. BTW, it was definitely partly due to the pathing. Leading forward-slash on paths were removed. You should be able to just use "Local file" when you use a Browser source.
