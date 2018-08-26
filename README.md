@@ -51,7 +51,7 @@ These are the different variables used in a function and what they mean.
 + **displayLength** - (decimal) the amount of time the popupElement will display aside from the animation.
 + **minutesToShow** - (string or an array of integers) "all" will diplay the popup every minute while an array of integers will display the popup on the minute marks that those integers represent (0 - 59) every hour.
 	+ [1,3,5,7] : will display 5:01, 5:03, 5:05, 5:07, 6:01, 6:03, 6:05, 6:07, 7:01, 7:03, etc.
-+ **showAtTopOfMinute ** - (true/false) If set true, popup will display (still based on minutesToShow) when the minute changes. If set false, popup will display based on minutesToShow and when the web page was loaded.
++ **showAtTopOfMinute** - (true/false) If set true, popup will display (still based on minutesToShow) when the minute changes. If set false, popup will display based on minutesToShow and when the web page was loaded.
 	+ true: if minutesToShow is [1,3], popup will display at 2:01:00 (2:01 & zero seconds), 2:03:00, 3:01:00, etc.
 	+ false: if minutesToShow is [25,27] and page was opened at 12:26:37 (12:26 & 37 seconds), popup will display at 12:27:37.
 + **randomMessages** - (array of strings) an array of strings for use of displaying random messages from.
