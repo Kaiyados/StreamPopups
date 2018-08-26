@@ -25,8 +25,6 @@ body
     position: fixed; 
     left: 0; 
     top: 20px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
 }
 
 .messageBoxNoBG
@@ -50,11 +48,10 @@ body
     margin: 0px auto 0px auto;
 }
 
-.vcenter
+.vcenter 
 { 
-    display: flex;
-	margin: auto;
+    display: flex; 
     align-items: center; 
-    vertical-align: middle !important;
+    vertical-align: middle !important; 
     height: 100%; 
 }
