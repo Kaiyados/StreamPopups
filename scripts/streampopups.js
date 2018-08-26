@@ -32,7 +32,7 @@ function loopPopup(vObject, animation, animationTime, timeShown, minutesToShow)
         }
     }    
     
-    if(showOnce = 0)
+    if(showOnce == 0)
     {
         setTimeout(function() {loopPopup(vObject,animation, animationTime, timeShown, minutesToShow); }, 60000);
     }
@@ -68,7 +68,7 @@ function loopRandomMessage(vObject, animation, animationTime, timeShown, minutes
         }
     }
     
-    if(showOnce = 0)
+    if(showOnce == 0)
     {
         setTimeout(function() {loopRandomMessage(vObject,animation, animationTime, timeShown, minutesToShow, messages); }, 60000);
     }
@@ -122,7 +122,7 @@ function loopMultiple(vObject, animation, animationTime, timeShown, minutesToSho
         }
     }
     
-    if(showOnce = 0)
+    if(showOnce == 0)
     {
         setTimeout(function() { loopMultiple(vObject, animation, animationTime, timeShown, minutesToShow); }, 60000);
     }
