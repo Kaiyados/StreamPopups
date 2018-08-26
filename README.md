@@ -13,8 +13,8 @@ If you would like to customize the popup overlays with different designs, then I
 HTML Tutorial: https://www.w3schools.com/html/
 CSS Tutorial: https://www.w3schools.com/html/html_css.asp
 Javascript Tutorial: https://www.w3schools.com/html/html_scripts.asp
-Bootstrap Grid System: http://getbootstrap.com/css/#grid
-Bootstrap Glyphicons: http://getbootstrap.com/components/#glyphicons
+Bootstrap Grid System: https://getbootstrap.com/docs/4.1/layout/grid/
+Font Awesome: https://fontawesome.com/icons?d=gallery&m=free
 Font Squirrel: https://www.fontsquirrel.com
 Google Fonts: https://fonts.google.com/
 0to255: http://www.0to255.com/
@@ -27,6 +27,48 @@ It would be very helpful to use a nice editor to edit and test your popup overla
 Notepad++ https://notepad-plus-plus.org/
 Komodo Edit https://www.activestate.com/komodo-edit
 Brackets http://brackets.io/ - I personally like this one. I explain why in the video.
+
+##### Functions and Definitions
+
+###### Functions
+```javascript
+showPopup(popupElement, animationStyle, animationLength, displayLength);
+loopPopup(popupElement, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
+
+showMultiple(popupElements, animationStyle, animationLength, displayLength);
+loopMultiple(popupElements, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
+
+showRandomMessage(popupElement, animationStyle, animationLength, displayLength, randomMessages);
+loopRandomMessage(popupElement, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute, randomMessages);
+```
+
+###### Variable Definitions
+These are the different variables used in a function and what they mean.
++ **popupElement** - (string) the string ID of the html element (usually a div) that will show.
++ **popupElements** - (array of strings) an array of string IDs of the html elements.
++ **animationStyle** - (string) the effect of how the popupElement will show and hide. The different styles can be found at (https://jqueryui.com/effect/)
++ **animationLength** - (decimal) the amount of time the animation will use to show or hide the popup element.
++ **displayLength** - (decimal) the amount of time the popupElement will display aside from the animation.
++ **minutesToShow** - (string or an array of integers) "all" will diplay the popup every minute while an array of integers will display the popup on the minute marks that those integers represent (0 - 59) every hour.
+	+ [1,3,5,7] : will display 5:01, 5:03, 5:05, 5:07, 6:01, 6:03, 6:05, 6:07, 7:01, 7:03, etc.
++ **showAtTopOfMinute ** - (true/false) If set true, popup will display (still based on minutesToShow) when the minute changes. If set false, popup will display based on minutesToShow and when the web page was loaded.
+	+ true: if minutesToShow is [1,3], popup will display at 2:01:00 (2:01 & zero seconds), 2:03:00, 3:01:00, etc.
+	+ false: if minutesToShow is [25,27] and page was opened at 12:26:37 (12:26 & 37 seconds), popup will display at 12:27:37.
++ **randomMessages** - (array of strings) an array of strings for use of displaying random messages from.
+
+
+###### Function Examples
+
+```javascript
+showPopup("box1", "fold", 1.5, 7);
+loopPopup("box1", "fold", 1.5, 7, "all", false);
+
+showMultiple(["box2", "box3"],"fold", 1.5, 7);
+loopMultiple(["box2", "box3"],"fold", 1.5, 7, [0,1,2,3,4,5], true);               
+
+showRandomMessage("rndmBox", "fold", 1.5, 7, messages);
+loopRandomMessage("rndmBox", "fold", 1.5, 7, [6,7,8,9,10], false, messages);
+```
 
 ### Setup
 
@@ -42,12 +84,3 @@ I like IIS Express. Both are simple to setup, but IIS Express is a smaller footp
 
 ##### Stream Software - Browser Source
 This should be pretty straight forward. If you are already streaming, and you have used something like Stream Labs, then you should easily point to the html file that you just set up hosting for.
-
-#### Updates
-#### 12/2/2017
-Added the ability to pass in the string "once" in to the variable 'minutesToShow' in order to accompany one time messages. An example use of this would be to have one browser source in streaming software that, once set to visible, will show the message only once. If you forget to hide the source after it displays, then it won't embarrassingly show multiple times in a loop.
-
-Removed "Random Messages" array from example.html, created randomMessages.js, and referenced randomMessages.js in example.html for organizational purposes. It may get lost in a the middle of other code, so putting the array of messages in it's own file makes it easier to find and update when needed. If you need different sets of randome messages, then you can either create another file to reference, or add them to randomMessages.js as a new differently named variable.
-
-#### 5/13/2018
-Through some random testing, I've found that it's not necessary to have a local web server to host this tiny website, at least if you are using OBS. I'm unsure if this is due to a change in OBS and/or if it was just a problem with pathing on the stylesheets and scripts. BTW, it was definitely partly due to the pathing. Leading forward-slash on paths were removed. You should be able to just use "Local file" when you use a Browser source.
