@@ -9,7 +9,7 @@ This is the biggest update so far.
 	+ Updated the ease of writing a function. For example, to pass in the popup div you can just use "div1" rather than $("#div1").
 	+ Added option to show popups at start of minute, or based on time the page is rendered.
 	+ Added "Functions and Definitions" section in the README file and GitHub Wiki to detail how functions work and what variables mean.
-+ Styles - Just a remeinder, you can customize styles to your preference
++ Styles - Just a reminder, you can customize styles to your preference
     + Added subtle rounded corners to messageBox.
 	+ Removed hardcoded heights from messageBox and messageBoxNoBG in example.html. After the conversion to Bootstrap 4 and Font Awesome, these hardcoded heights for each popup was no longer necessary. They were there to prevent visual glitches during animation.
 	+ Removed widths from
