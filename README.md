@@ -5,7 +5,7 @@ Collection of HTML, CSS, Bootstrap, JQuery/Javascript for use of displaying cust
 
 The following content assumes that you may not have knowledge of web development. That is why I'm providing links to resources to help. I even created a video to go through the following items.
 
-Tutorial Video: https://youtu.be/_SM66rUIT5o
+Tutorial Video: https://www.youtube.com/watch?v=f2d_5GMN1vs
 
 ### Personalizing/Customizing
 If you would like to customize the popup overlays with different designs, then I suggest that you should have some knowledge of HTML, CSS, Javascript/JQuery. However, this is completely **optional**. I do suggest that you at least watch my video to see the key points of editing.

@@ -50,6 +50,12 @@ body
     margin: 0px auto 0px auto;
 }
 
+.hdrContainer .row
+{
+	padding: 0px;
+	margin: 0px;
+}
+
 .vcenter
 { 
     display: flex;
