@@ -32,21 +32,24 @@ Brackets http://brackets.io/ - I personally like this one. I explain why in the 
 
 ###### Functions
 ```javascript
-showPopup(popupElement, animationStyle, animationLength, displayLength);
-loopPopup(popupElement, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
+showPopup(popupElement, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength);
+loopPopup(popupElement, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
 
-showMultiple(popupElements, animationStyle, animationLength, displayLength);
-loopMultiple(popupElements, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
+showMultiple(popupElements, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength);
+loopMultiple(popupElements, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength, minutesToShow, showAtTopOfMinute);
 
-showRandomMessage(popupElement, animationStyle, animationLength, displayLength, randomMessages);
-loopRandomMessage(popupElement, animationStyle, animationLength, displayLength, minutesToShow, showAtTopOfMinute, randomMessages);
+showRandomMessage(popupElement, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength, randomMessages);
+loopRandomMessage(popupElement, animationStyleIn, directionIn, animationStyleOut, directionOut, animationLength, displayLength, minutesToShow, showAtTopOfMinute, randomMessages);
 ```
 
 ###### Variable Definitions
 These are the different variables used in a function and what they mean.
 + **popupElement** - (string) the string ID of the html element (usually a div) that will show.
 + **popupElements** - (array of strings) an array of string IDs of the html elements.
-+ **animationStyle** - (string) the effect of how the popupElement will show and hide. The different styles can be found at (https://jqueryui.com/effect/)
++ **animationStyleIn** - (string) the effect of how the popupElement will show. The different styles can be found at (https://jqueryui.com/effect/)
++ **animationStyleOut** - (string or NULL) the effect of how the popupElement will hide. Can be NULL, which defaults to be the same as animationStyleIn. The different styles can be found at (https://jqueryui.com/effect/)
++ **directionIn** - (string or NULL) the direction from which the popup will animate when showing. Can be NULL, which defaults to "left."
++ **directionOut** - (string or NULL) the direction the popup will animate when hiding. Can be NULL, which defaults to "left."
 + **animationLength** - (decimal) the amount of time the animation will use to show or hide the popup element.
 + **displayLength** - (decimal) the amount of time the popupElement will display aside from the animation.
 + **minutesToShow** - (string or an array of integers) "all" will diplay the popup every minute while an array of integers will display the popup on the minute marks that those integers represent (0 - 59) every hour.
@@ -58,16 +61,17 @@ These are the different variables used in a function and what they mean.
 
 
 ###### Function Examples
+*NOTE: "animationIn" is required. "directionIn," "animationOut," and "directionOut" are not required. But NULL should be in their place.
 
 ```javascript
-showPopup("box1", "fold", 1.5, 7);
-loopPopup("box1", "fold", 1.5, 7, "all", false);
+showPopup("box1", "fold", null, null, null, 1.5, 7);
+loopPopup("box1", "fold", "right", null, null, 1.5, 7, "all", false);
 
-showMultiple(["box2", "box3"],"fold", 1.5, 7);
-loopMultiple(["box2", "box3"],"fold", 1.5, 7, [0,1,2,3,4,5], true);               
+showMultiple(["box2", "box3"], "slide", "left", null, "right", 1.5, 7);
+loopMultiple(["box2", "box3"], "bounce", "up", "slide", "left", 1.5, 7, [0,1,2,3,4,5], true);               
 
-showRandomMessage("rndmBox", "fold", 1.5, 7, messages);
-loopRandomMessage("rndmBox", "fold", 1.5, 7, [6,7,8,9,10], false, messages);
+showRandomMessage("rndmBox", "fade", null, "slide", "right", 1.5, 7, messages);
+loopRandomMessage("rndmBox", "fold", null, null, null, 1.5, 7, [6,7,8,9,10], false, messages);
 ```
 
 ### Setup
