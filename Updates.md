@@ -3,7 +3,7 @@ More options again.
 
 + Added variables to functions to allow you to have a different animation for showing and hiding.
 + Added variables to functions to allow you to decide what directions the popups will animate to or from during hiding and showing.
-+ README.md will cover these details.
++ README.md: Functions, Variable Definitions, and Examples updated to cover these details.
 
 
 #### 8/25/2018
