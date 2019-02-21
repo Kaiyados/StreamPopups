@@ -1,0 +1,53 @@
+.messageBox
+{
+    /* Put design overrides for messageBox here. */    
+}
+
+/* Example overrides for messageBox that will match different networks. Included left and right selectors for removing unnecessary border sides. */
+.messageBox.youtube
+{
+    background-color: white; 
+    color: red;
+    font-size: 15pt;  
+    border: 2px solid red;
+}
+.messageBox.youtube.left
+{
+    border-left: none;
+}
+.messageBox.youtube.right
+{
+    border-right: none;
+}
+
+.messageBox.twitch
+{   
+    background-color: white; 
+    color: mediumpurple;
+    font-size: 15pt;
+    border: 2px solid mediumpurple;
+}
+.messageBox.twitch.left
+{
+    border-left: none;
+}
+.messageBox.twitch.right
+{
+    border-right: none;
+}
+
+.messageBox.twitter
+{   
+    background-color: white; 
+    color: aqua;
+    font-size: 15pt;  
+    border: 2px solid aqua;
+}
+.messageBox.twitter.left
+{
+    border-left: none;
+}
+.messageBox.twitter.right
+{
+    border-right: none;
+}

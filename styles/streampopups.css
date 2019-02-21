@@ -1,18 +1,14 @@
-<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
-
-@font-face 
-{
-    font-family: 'CaviarDreams';
-    src: url('/fonts/CaviarDreams.ttf');
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('/styles/user_custom.css');
 
 body 
 { 
+    overflow: hidden;
     background-color: transparent; 
-    font-family: "Michroma", verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.messageBox 
+.messageBox /*Defaults to top left. */
 {
     border-top: 15px solid #1d335f;
     width: 350px;
@@ -29,9 +25,50 @@ body
 	border-bottom-right-radius: 5px;
 }
 
-.messageBoxNoBG
+.messageBox.left
+{
+    left: 0; 
+    top: 20px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.messageBox.right
+{
+    left: auto;
+    right: 0; 
+    top: 20;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.messageBox.btm, .messageBox.btm.left
+{
+    left: 0;
+    top: 750;
+    border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.messageBox.btm.right
+{
+    left: auto;
+    right: 0; 
+    top: 750;
+    border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.messageBox.noBg
 {
     width: 350px;
+    background-color: transparent;
     color: #fff;
     font-size: 10pt;
     display: none; 
@@ -42,18 +79,37 @@ body
     top: 200px;
 }
 
-.hdrContainer
+/* Font Awesome Icon in a messageBox */
+.messageBox .fab
 {
-    color: white; 
-    display: none; 
-    padding: 5px 0px 0px 0px; 
-    margin: 0px auto 0px auto;
+    align-self: center; 
+    font-size: 32pt; 
 }
 
-.hdrContainer .row
+.hdrContainer
+{
+    color: white;
+    font-size: 25pt;
+    display: none;
+    padding: 5px 0px 0px 0px;
+    vertical-align: middle !important;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.hdrContainer.row
 {
 	padding: 0px;
 	margin: 0px;
+}
+
+/* Font Awesome Icon in header. */
+.hdrContainer .fab
+{
+    align-self: center; 
+    font-size: 26pt; 
+    color: darkorange
 }
 
 .vcenter
@@ -62,5 +118,5 @@ body
 	margin: auto;
     align-items: center; 
     vertical-align: middle !important;
-    height: 100%; 
+    height: 100%;
 }

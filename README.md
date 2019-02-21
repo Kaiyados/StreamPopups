@@ -6,6 +6,7 @@ Collection of HTML, CSS, Bootstrap, JQuery/Javascript for use of displaying cust
 The following content assumes that you may not have knowledge of web development. That is why I'm providing links to resources to help. I even created a video to go through the following items.
 
 Tutorial Video: https://www.youtube.com/watch?v=f2d_5GMN1vs
+Original Video: https://www.youtube.com/watch?v=_SM66rUIT5o
 
 ### Personalizing/Customizing
 If you would like to customize the popup overlays with different designs, then I suggest that you should have some knowledge of HTML, CSS, Javascript/JQuery. However, this is completely **optional**. I do suggest that you at least watch my video to see the key points of editing.
@@ -28,7 +29,11 @@ Notepad++ https://notepad-plus-plus.org/
 Komodo Edit https://www.activestate.com/komodo-edit
 Brackets http://brackets.io/ - I personally like this one. I explain why in the video.
 
-##### Functions and Definitions
+##### CSS
+
+Due to an update (2/20/2019) on styles, I'm including this blurb! First, check the Updates file to see the changes that were made. However, to be brief, changes were made within "streampopups.css" to allow more options and the the file "user_custom.css" was created so users can add their own custom styles or override existing styles. For upgrading, that is if you already have a copy and made customizations, I suggest copying your altered code into "user_custom.css" and pulling in the updated "streampopups.css." Then you can evaluate how you might have to adjust your custom styles.
+
+### Functions and Definitions
 
 ###### Functions
 ```javascript

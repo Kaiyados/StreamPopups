@@ -1,3 +1,23 @@
+#### 2/20/2019
+Big style update.
+
+Updates for styles are listed below, but a quick note on updating files you may have already customized. "user_custom.css" was added for custom styles to go in. I suggest copying all of your altered styles into "user_custom.css," bring in the new "streampopups.css" file, and leave it untouched. You don't have to follow this suggestion if you are comfortable with css code. If you are, you can just pick and choose what you want to update.
+
++ Added new css selectors.
+    + left, right, btm - these selectors are specifically for "messageBox." It allows you to move the messageBox around the screen. The default is left, so you won't need to type that out if you don't want to. "btm" with combination of "left" or "right" will push the the messageBox toward the bottom of the screen.
+    + fab - "fab" is actually a Font Awesome selector, but added some styles in steampopups.css so you can control size of the icons within messageBox or hdrContainer independently.
++ Added "user_custom.css"
+    + This file is to house any custom styles you would like to add; just in case anyone isn't comfortable altering the default styles in "streampopups.css."
+    + Comes with example/pre-existing code that already overrides things. You may find some of them to be quite helpful.
+    + This file is already linked at the end of "streampopups.css" so you don't have to worry about linking this new file in each of your existing HTML pages.
++ Various cleanup
+    + By adding "fab" selector to streampopups.css, some of the styles were removed from example.html; such as controlling the size or color of the icon.
+    + Cleaned up the confusing font arrangement in "streampopups.css"; it didn't work and wasn't linked correctly. Changed font to a Google Font. This can easily be overridden to use a different Google Font.
+    + Removed "fonts" folder since it's only linking a Google Font now.
++ Altered the examples of messageBox in "example.html" to show off the updated styles. This also includes the use of the example overriden styles in "user_custom.css."
++ More notes about styles added to README file.
+
+
 #### 9/1/2018
 More options again.
 

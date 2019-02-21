@@ -15,49 +15,48 @@
             //When page loads and is ready
             $(document).ready(function() 
             {   				
-				showPopup("box1", "bounce", "up", "slide", null, 1.2, 7);
-                //loopPopup("box1", "fold", null, null, null, 1.5, 7, "all", false);
-				
+				showPopup("box1", "slide", "left", "slide", "left", 1.2, 7);
+                //loopPopup("box2", "fold", "right", "slide", "down", 1.5, 7, "all", false);
+                
 				//showMultiple(["box2", "box3"], "fold", null, null, null, 1.5, 7);
-                //loopMultiple(["box2", "box3"], "fold", null, null, null, 1.5, 7, [0,1,2,3,4,5], false);           
+                //loopMultiple(["box2", "box3"], "fold", null, null, null, 1.5, 7, [0,1,2,3,4,5], false);   
                 
 				//showRandomMessage("rndmBox", "fold", null, null, null, 1.5, 7, messages);
 				//loopRandomMessage("rndmBox", "fold", null, null, null, 1.5, 7, [6,7,8,9,10], false, messages);
                 
 				/* These are extra examples. */
-				//loopMultiple(["URL","URL2"], "fade", null, null, null, 1.5, 9, "all", false);
+				//loopMultiple(["URL","URL2"], "fade", null, null, null, 1.5, 30, "all", false);
                 //loopMultiple(["eventList1, "eventList2"], "fade", null, null, null, 1.5, 9, [16,17,18,19,20], false);
             });
         </script>
     </head>
     <body>
-        <div id="box1" class="messageBox">
+        <div id="box1" class="messageBox left">
 			<div class="row vcenter">
 				<div class="col-3">
-					<span class="fab fa-twitter" style="font-size: 30pt; color: aqua;"></span>
+					<span class="fab fa-twitch" style="color: mediumpurple;"></span>
 					<!--<img src="images/image.png" class="img-responsive" />-->
 				</div>
 				<div class="col">
-					Words that are in box 1.<br>
-					This is the next line.
+					Words that are in box 1.
 				</div>
 			</div>
         </div>
         
-        <div id="box2" class="messageBox">
+        <div id="box2" class="messageBox right youtube">
 			<div class="row vcenter">
 				<div class="col-3">
-					<span class="fab fa-twitch" style="font-size: 30pt; color: mediumpurple;"></span>
+					<span class="fab fa-youtube" style="color: red;"></span>
 				</div>
 				<div class="col">
 					Words that are in box 2.
 				</div>
 			</div>
         </div>
-        <div id="box3" class="messageBox">
+        <div id="box3" class="messageBox bottom twitter">
 			<div class="row vcenter">
 				<div class="col-3">
-					<span class="fab fa-youtube" style="font-size: 30pt; color: red;"></span>
+					<span class="fab fa-twitter" style="color: aqua;"></span>
 				</div>
 				<div class="col">
 					Words that are in box 3.
@@ -78,21 +77,23 @@
         <div id="URL" class="hdrContainer">
 			<div class="row">
 				<div class="col d-flex justify-content-center">
-					<span class="fab fa-youtube" style="font-size: 22pt; color: darkorange"></span>
-					YouTube Name
-				</div>
+					<span class="fab fa-youtube"></span>
+                    &nbsp;
+                    Youtube Channel
+				</div>                
 			</div>
         </div>
-        <div id="URL2" class="hdrContainer ">
+        <div id="URL2" class="hdrContainer">
 			<div class="row">
 				<div class="col d-flex justify-content-center">
-					<span class="fab fa-twitch" style="font-size: 22pt; color: darkorange"></span>
+					<span class="fab fa-twitch"></span>
+                    &nbsp;
             		Twitch Channel
 				</div>
 			</div>
         </div>
         
-        <div id="eventList1" class="messageBoxNoBG">
+        <div id="eventList1" class="messageBox noBg">
 			<div class="row">
 				<div class="col">
 					<object data="https://streamlabs.com/widgets/event-list/v1/#################01" style="width: 100%;"></object>
@@ -100,7 +101,7 @@
 			</div>
         </div>
         
-        <div id="eventList2" class="messageBoxNoBG">
+        <div id="eventList2" class="messageBox noBg">
 			<div class="row">
 				<div class="col">
 					<object data="https://streamlabs.com/widgets/event-list/v1/#################02" style="width: 100%;"></object>
