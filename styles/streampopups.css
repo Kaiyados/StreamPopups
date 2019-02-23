@@ -67,6 +67,7 @@ body
 
 .messageBox.noBg
 {
+    border: none;
     width: 350px;
     background-color: transparent;
     color: #fff;

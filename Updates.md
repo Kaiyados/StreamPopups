@@ -40,7 +40,6 @@ This is the biggest update so far.
 + Styles - Just a reminder, you can customize styles to your preference
     + Added subtle rounded corners to messageBox.
 	+ Removed hardcoded heights from messageBox and messageBoxNoBG in example.html. After the conversion to Bootstrap 4 and Font Awesome, these hardcoded heights for each popup was no longer necessary. They were there to prevent visual glitches during animation.
-	+ Removed widths from
 + Removed other unnecessary files.
 + Added an images folder. Although it's empty, it makes setup easier when custom images need to be used.
 + Updated example.html to reflect all the changes.
